@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bostonia Construction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1A1814" stroke-width="2" stroke-linecap="round">
+          <rect x="1" y="12" width="9" height="11" rx="1.5"/>
+          <rect x="13" y="7" width="10" height="16" rx="1.5"/>
+          <line x1="0" y1="23" x2="24" y2="23"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-name">Bostonia</div>
+        <div class="logo-sub">Construction</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Inicio</a>
+      <a href="servicios.html" class="nav-link">Servicios</a>
+      <a href="proyectos.html" class="nav-link">Proyectos</a>
+      <a href="nosotros.html" class="nav-link">Nosotros</a>
+      <a href="contacto.html" class="btn btn-gold" style="padding:0.65rem 1.5rem;font-size:0.72rem;">Cotizar</a>
+    </div>
+    <button id="menuBtn" class="menu-btn">
+      <svg width="22" height="18" viewBox="0 0 22 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="0" y1="1" x2="22" y2="1"/><line x1="0" y1="9" x2="22" y2="9"/><line x1="0" y1="17" x2="22" y2="17"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobileMenu">
+    <a href="index.html" class="mobile-link">Inicio</a>
+    <a href="servicios.html" class="mobile-link">Servicios</a>
+    <a href="proyectos.html" class="mobile-link">Proyectos</a>
+    <a href="nosotros.html" class="mobile-link">Nosotros</a>
+    <a href="contacto.html" class="btn btn-gold" style="text-align:center;">Cotizar Proyecto</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-title fade-in d2">
+          Construimos<br/>tu <span>visión</span><br/>con precisión
+        </h1>
+        <p class="hero-desc fade-in d3">Más de 15 años transformando ideas en estructuras que perduran. Residencial, comercial e industrial con los más altos estándares.</p>
+        <div class="hero-actions fade-in d4">
+          <a href="proyectos.html" class="btn btn-gold">Ver Proyectos</a>
+          <a href="contacto.html" class="btn btn-outline-light">Solicitar Cotización</a>
+        </div>
+      </div>
+      <!-- <div class="stats-card fade-in d4">
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="350">0</span><sup>+</sup></div>
+          <div class="stat-label">Proyectos completados</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="15">0</span><sup>+</sup></div>
+          <div class="stat-label">Años de experiencia</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="98">0</span><sup>%</sup></div>
+          <div class="stat-label">Clientes satisfechos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="200">0</span><sup>+</sup></div>
+          <div class="stat-label">Profesionales</div>
+        </div>
+      </div>-->
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS – CAROUSEL LINEAL FULLWIDTH -->
+<section id="servicios">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="tag">Nuestros Servicios</div>
+      <h2>Lo que <em>hacemos</em></h2>
+      <p class="body-sm">Soluciones integrales desde el diseño hasta la entrega final. Un solo equipo, un solo compromiso.</p>
+    </div>
+  </div>
+
+  <div class="lcar-wrap reveal">
+    <div class="lcar-track" id="lcarTrack">
+      <div class="lcar-card">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=85" alt=""/>
+        <div class="lcar-over"></div>
+        <div class="lcar-body">
+          <span class="lcar-cat">Comercial</span>
+          <h3>Construcción Comercial</h3>
+          <p>Torres de oficinas, centros comerciales y hoteles diseñados para maximizar el retorno de su inversión.</p>
+        </div>
+      </div>
+      <div class="lcar-card">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=85" alt=""/>
+        <div class="lcar-over"></div>
+        <div class="lcar-body">
+          <span class="lcar-cat">Residencial</span>
+          <h3>Construcción Residencial</h3>
+          <p>Casas, condominios y urbanizaciones donde cada detalle importa. Acabados premium y proceso transparente.</p>
+        </div>
+      </div>
+      <div class="lcar-card">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=85" alt=""/>
+        <div class="lcar-over"></div>
+        <div class="lcar-body">
+          <span class="lcar-cat">Industrial</span>
+          <h3>Infraestructura Industrial</h3>
+          <p>Plantas manufactureras y parques logísticos para máxima eficiencia y cumplimiento normativo.</p>
+        </div>
+      </div>
+      <div class="lcar-card">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=85" alt=""/>
+        <div class="lcar-over"></div>
+        <div class="lcar-body">
+          <span class="lcar-cat">Renovaciones</span>
+          <h3>Renovaciones & Remodelaciones</h3>
+          <p>Transformamos espacios existentes elevando cada ambiente y cumpliendo plazos acordados.</p>
+        </div>
+      </div>
+      <div class="lcar-card">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=85" alt=""/>
+        <div class="lcar-over"></div>
+        <div class="lcar-body">
+          <span class="lcar-cat">Diseño</span>
+          <h3>Diseño & Build</h3>
+          <p>Desde el concepto hasta la entrega de llaves bajo un solo contrato. Ahorra tiempo y costos.</p>
+        </div>
+      </div>
+      <div class="lcar-card">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=85" alt=""/>
+        <div class="lcar-over"></div>
+        <div class="lcar-body">
+          <span class="lcar-cat">Consultoría</span>
+          <h3>Consultoría & Gestión</h3>
+          <p>Supervisión técnica, control de costos y gestión con los más altos estándares del sector.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso">
+  <div class="container">
+    <div class="sec-head reveal" style="margin-bottom:0;">
+      <div class="tag">Cómo trabajamos</div>
+      <h2>Nuestro <em>proceso</em></h2>
+      <p class="body-sm" style="color:rgba(255,255,255,0.38);">Cuatro pasos. Una promesa. Su proyecto entregado con precisión.</p>
+    </div>
+    <div class="proc-grid reveal">
+      <div class="proc-card">
+        <div class="proc-num">01</div>
+        <div class="proc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h4>Consulta Inicial</h4>
+        <p>Entendemos su visión, necesidades y presupuesto en una reunión sin compromiso. Solo escuchamos.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">02</div>
+        <div class="proc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <h4>Diseño & Propuesta</h4>
+        <p>Planos, renders 3D y propuesta económica detallada lista para su aprobación. Todo claro, sin sorpresas.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">03</div>
+        <div class="proc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <h4>Construcción</h4>
+        <p>Ejecutamos con precisión. Reportes semanales y acceso al portal del cliente durante todo el proceso.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">04</div>
+        <div class="proc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></div>
+        <h4>Entrega & Garantía</h4>
+        <p>Llave en mano con garantía estructural de 10 años y soporte post-construcción continuo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="container">
+    <div class="proj-top reveal">
+      <div>
+        <div class="tag">Portafolio</div>
+        <h2>Proyectos <em>destacados</em></h2>
+      </div>
+      <div class="proj-actions">
+        <button class="cbtn" id="prevBtn"><svg viewBox="0 0 16 16"><polyline points="10,3 5,8 10,13"/></svg></button>
+        <button class="cbtn" id="nextBtn"><svg viewBox="0 0 16 16"><polyline points="6,3 11,8 6,13"/></svg></button>
+        <a href="proyectos.html" class="btn btn-outline">Ver todos</a>
+      </div>
+    </div>
+    <div class="filters reveal">
+      <button class="fpill active" data-cat="all">Todos</button>
+      <button class="fpill" data-cat="comercial">Comercial</button>
+      <button class="fpill" data-cat="residencial">Residencial</button>
+      <button class="fpill" data-cat="industrial">Industrial</button>
+    </div>
+    <div class="car-wrap reveal">
+      <div class="car-track" id="carTrack">
+        <div class="pcard" data-cat="comercial">
+          <div class="pcard-img-wrap"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80" alt="" class="pcard-img"/><span class="pcard-badge">Comercial</span></div>
+          <div class="pcard-info"><h4>Torre Empresarial Nexus</h4><p>24 pisos · Santo Domingo</p><div class="pcard-meta"><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="12" height="12" rx="1"/><line x1="2" y1="7" x2="14" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg> 2023</span><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 14s-5-4.686-5-8a5 5 0 0110 0c0 3.314-5 8-5 8z"/><circle cx="8" cy="6" r="1.5"/></svg> Santo Domingo</span></div></div>
+        </div>
+        <div class="pcard" data-cat="residencial">
+          <div class="pcard-img-wrap"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80" alt="" class="pcard-img"/><span class="pcard-badge">Residencial</span></div>
+          <div class="pcard-info"><h4>Residencias del Mar</h4><p>48 unidades · Puerto Plata</p><div class="pcard-meta"><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="12" height="12" rx="1"/><line x1="2" y1="7" x2="14" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg> 2022</span><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 14s-5-4.686-5-8a5 5 0 0110 0c0 3.314-5 8-5 8z"/><circle cx="8" cy="6" r="1.5"/></svg> Puerto Plata</span></div></div>
+        </div>
+        <div class="pcard" data-cat="industrial">
+          <div class="pcard-img-wrap"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80" alt="" class="pcard-img"/><span class="pcard-badge">Industrial</span></div>
+          <div class="pcard-info"><h4>Parque Logístico Norte</h4><p>12,000 m² · Santiago</p><div class="pcard-meta"><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="12" height="12" rx="1"/><line x1="2" y1="7" x2="14" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg> 2023</span><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 14s-5-4.686-5-8a5 5 0 0110 0c0 3.314-5 8-5 8z"/><circle cx="8" cy="6" r="1.5"/></svg> Santiago</span></div></div>
+        </div>
+        <div class="pcard" data-cat="comercial">
+          <div class="pcard-img-wrap"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700&q=80" alt="" class="pcard-img"/><span class="pcard-badge">Comercial</span></div>
+          <div class="pcard-info"><h4>Centro Médico Salud+</h4><p>8 pisos · La Romana</p><div class="pcard-meta"><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="12" height="12" rx="1"/><line x1="2" y1="7" x2="14" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg> 2022</span><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 14s-5-4.686-5-8a5 5 0 0110 0c0 3.314-5 8-5 8z"/><circle cx="8" cy="6" r="1.5"/></svg> La Romana</span></div></div>
+        </div>
+        <div class="pcard" data-cat="residencial">
+          <div class="pcard-img-wrap"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=80" alt="" class="pcard-img"/><span class="pcard-badge">Residencial</span></div>
+          <div class="pcard-info"><h4>Villas Palmeras</h4><p>22 villas · Punta Cana</p><div class="pcard-meta"><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="12" height="12" rx="1"/><line x1="2" y1="7" x2="14" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg> 2021</span><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 14s-5-4.686-5-8a5 5 0 0110 0c0 3.314-5 8-5 8z"/><circle cx="8" cy="6" r="1.5"/></svg> Punta Cana</span></div></div>
+        </div>
+        <div class="pcard" data-cat="industrial">
+          <div class="pcard-img-wrap"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=700&q=80" alt="" class="pcard-img"/><span class="pcard-badge">Industrial</span></div>
+          <div class="pcard-info"><h4>Planta Manufacturera BX</h4><p>8,500 m² · San Pedro</p><div class="pcard-meta"><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="12" height="12" rx="1"/><line x1="2" y1="7" x2="14" y2="7"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="11" y1="1" x2="11" y2="5"/></svg> 2023</span><span><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 14s-5-4.686-5-8a5 5 0 0110 0c0 3.314-5 8-5 8z"/><circle cx="8" cy="6" r="1.5"/></svg> San Pedro</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="car-dots" id="carDots"></div>
+  </div>
+</section>
+
+<!-- NOSOTROS 
+<section id="nosotros">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=85" alt="Equipo Bostonia" class="about-img"/>
+        <div class="about-badge"><strong>15<small>+</small></strong><span>Años de confianza</span></div>
+      </div>
+      <div class="reveal">
+        <div class="tag">Quiénes Somos</div>
+        <h2>Experiencia que<br/><em>construye futuro</em></h2>
+        <p class="body-sm" style="margin-top:1.4rem;">Fundada en 2009, Bostonia Construction se ha consolidado como una de las empresas de construcción más confiables de República Dominicana. Más de 200 profesionales trabajando con un único propósito: superar las expectativas.</p>
+        <p class="body-sm" style="margin-top:1rem;">Combinamos tecnología de vanguardia con los más altos estándares de seguridad y sostenibilidad, entregando proyectos que perduran y generan valor a largo plazo.</p>
+        <div class="vals-grid">
+          <div class="val-item"><div class="val-icon"><svg viewBox="0 0 24 24"><path d="M12 22s-8-5.686-8-13a8 8 0 0116 0c0 7.314-8 13-8 13z"/><polyline points="9,12 11,14 15,10"/></svg></div><span>Transparencia total</span></div>
+          <div class="val-item"><div class="val-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div><span>Plazos garantizados</span></div>
+          <div class="val-item"><div class="val-icon"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg></div><span>Materiales premium</span></div>
+          <div class="val-item"><div class="val-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><span>Equipo certificado</span></div>
+          <div class="val-item"><div class="val-icon"><svg viewBox="0 0 24 24"><path d="M12 22s-8-5.686-8-13a8 8 0 0116 0c0 7.314-8 13-8 13z"/></svg></div><span>Garantía estructural</span></div>
+          <div class="val-item"><div class="val-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 6v6l4 2"/></svg></div><span>Construcción sostenible</span></div>
+        </div>
+        <a href="nosotros.html" class="btn btn-dark" style="margin-top:2rem;">Conocer el equipo</a>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+
+
+<!-- TESTIMONIOS 
+<section id="testimonios">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="tag">Testimonios</div>
+      <h2>Voces que nos <em>inspiran</em></h2>
+    </div>
+    <div class="reveal">
+      <div class="testi-track" id="testiTrack">
+        <div class="tcard"><div class="tcard-stars">★★★★★</div><p>"Bostonia Construction superó todas nuestras expectativas. Entregaron el edificio antes del plazo y con una calidad simplemente impecable. Los recomendaría sin dudarlo a cualquier empresa."</p><div class="tcard-author"><div class="tcard-av">RM</div><div><strong>Roberto Martínez</strong><span>CEO, Grupo Inversiones RM</span></div></div></div>
+        <div class="tcard"><div class="tcard-stars">★★★★★</div><p>"La comunicación durante toda la obra fue excepcional. Siempre supimos exactamente el estado del proyecto. El equipo respondió cada pregunta con profesionalismo total."</p><div class="tcard-author"><div class="tcard-av">AL</div><div><strong>Ana López</strong><span>Directora, Constructora Alianza</span></div></div></div>
+        <div class="tcard"><div class="tcard-stars">★★★★★</div><p>"Llevamos tres proyectos con Bostonia y cada uno mejor que el anterior. Su equipo de ingenieros es de primer nivel y los acabados son espectaculares. Empresa verdaderamente confiable."</p><div class="tcard-author"><div class="tcard-av">JC</div><div><strong>José Castillo</strong><span>Propietario, Villas Palmeras</span></div></div></div>
+        <div class="tcard"><div class="tcard-stars">★★★★★</div><p>"El proyecto de nuestro centro médico fue ejecutado con una precisión técnica admirable. Bostonia entendió desde el primer día las necesidades especiales de una infraestructura de salud."</p><div class="tcard-author"><div class="tcard-av">MP</div><div><strong>Dra. María Peña</strong><span>Directora médica, Centro Salud+</span></div></div></div>
+      </div>
+      <div class="testi-ctrl">
+        <button class="cbtn" id="testiPrev"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="10,3 5,8 10,13"/></svg></button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="cbtn" id="testiNext"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,3 11,8 6,13"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+<!-- CTA -->
+<section id="cta">
+  <div class="container reveal">
+    <div class="cta-card">
+      <div class="tag">Iniciemos juntos</div>
+      <h2>¿Listo para construir<br/><em>tu proyecto?</em></h2>
+      <p class="body-sm" style="color:rgba(255,255,255,0.45);max-width:480px;margin:1.2rem auto 2.5rem;">Nuestros expertos están listos para escucharte. Recibe una consulta inicial completamente gratuita y sin compromiso.</p>
+      <div class="cta-btns">
+        <a href="contacto.html" class="btn btn-gold">Solicitar consulta gratis</a>
+        <a href="tel:+18095550100" class="btn btn-outline-light">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (809) 555-0100
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#1A1814" stroke-width="2" stroke-linecap="round"><rect x="1" y="12" width="9" height="11" rx="1.5"/><rect x="13" y="7" width="10" height="16" rx="1.5"/><line x1="0" y1="23" x2="24" y2="23"/></svg></div>
+          <div><div class="logo-name">Bostonia</div><div class="logo-sub">Construction</div></div>
+        </a>
+        <p>Construyendo el futuro de República Dominicana con excelencia, integridad y compromiso desde 2009.</p>
+        <div class="soc-row">
+          <a href="#" class="soc-btn"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="soc-btn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="soc-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="soc-btn"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <p class="foot-h"></p>
+        <ul class="foot-links">
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h"></p>
+        <ul class="foot-links">
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h">Contacto</p>
+        <ul class="foot-contact">
+          <li><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Av. Winston Churchill #100,<br/>Santo Domingo, RD</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>(809) 555-0100</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>info@bostoniaconstruction.com</span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Lun–Vie: 8:00am – 6:00pm</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2024 Bostonia Construction. Todos los derechos reservados.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/index.js"></script>
+</body>
+</html>
