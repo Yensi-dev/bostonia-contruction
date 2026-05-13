@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Bostonia Construction</title>
+  <link rel="icon" href="img/logo-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- HERO INTERNO -->
+  <section id="page-hero">
+    <div class="page-hero-bg" style="background-image:url('img/Almacen1.png')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-inner">
+      <span class="page-hero-tag fade-in d1">Contacto</span>
+      <h1 class="page-hero-title fade-in d2">Hablemos de<br><span>tu proyecto.</span></h1>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto-main">
+    <div class="container">
+      <div class="contact-split reveal">
+
+        <!-- INFO -->
+        <div class="contact-info">
+          <span class="about-tag">Estamos aquí</span>
+          <h2>¿Tienes un proyecto<br>en mente?</h2>
+          <p>Cuéntanos qué necesitas y te asesoramos sin compromiso. Respondemos en menos de 24 horas.</p>
+
+          <ul class="contact-list">
+            <li>
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Dirección</div>
+                <div class="contact-item-val">Av. Winston Churchill #100, Santo Domingo, RD</div>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Teléfono</div>
+                <div class="contact-item-val">(809) 555-0100</div>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-val">info@bostoniaconstruction.com</div>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="5" y="2" width="14" height="20" rx="2"/>
+                  <line x1="12" y1="18" x2="12" y2="18"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-item-label">WhatsApp</div>
+                <div class="contact-item-val">+1 (809) 555-0100</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nombre completo</label>
+                <input type="text" placeholder="Juan Pérez" required />
+              </div>
+              <div class="form-group">
+                <label>Correo electrónico</label>
+                <input type="email" placeholder="juan@email.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Teléfono</label>
+                <input type="tel" placeholder="+1 (809) 000-0000" />
+              </div>
+              <div class="form-group">
+                <label>Tipo de proyecto</label>
+                <select>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option>Casa Cápsula Residencial</option>
+                  <option>Almacén Prefabricado</option>
+                  <option>Proyecto Comercial</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label>Mensaje</label>
+              <textarea rows="5" placeholder="Cuéntanos sobre tu proyecto, dimensiones, ubicación y cualquier detalle relevante..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Enviar mensaje
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

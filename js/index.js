@@ -141,3 +141,16 @@ document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
   [tPrev,tNext].forEach(btn=>btn.addEventListener('click',()=>{ clearInterval(tTimer); tTimer=setInterval(nextT,5500); }));
   buildTD();
 })();
+
+/* ── HERO SLIDER automático ── */
+(function () {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!slides.length) return;
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 6000);
+})();
