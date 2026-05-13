@@ -138,3 +138,188 @@ if (slides.length) {
     slides[current].classList.add('active');
   }, 6000);
 }
+
+/* ══════════════════════════════════════════════════════
+   MODAL DE PROYECTOS
+══════════════════════════════════════════════════════ */
+(function () {
+
+  /* Datos de cada proyecto */
+  const proyectos = {
+    'punta-vella': {
+      badge:    'Residencial',
+      title:    'Punta Vella Residences',
+      location: 'Punta Vella, RD',
+      img:      'img/modular/residencial-capsules.png',
+      specs: [
+        { val: '12',   label: 'Unidades' },
+        { val: '65m²', label: 'Por unidad' },
+        { val: '45d',  label: 'Instalación' },
+        { val: '2024', label: 'Año' },
+      ],
+      desc: 'El primer conjunto residencial de casas cápsula prefabricadas frente al mar en República Dominicana. Diseño futurista con acabados premium en alucink y metal estructural. Cada unidad cuenta con terraza privada y vista panorámica al mar.',
+      lista: [
+        'Estructura metálica de alta resistencia marina',
+        'Paneles alucink con aislamiento térmico',
+        'Ventanas panorámicas con vista al mar',
+        'Sistema eléctrico e hidráulico completo',
+        'Terraza privada en cada unidad',
+      ],
+    },
+    'almacen-norte': {
+      badge:    'Industrial',
+      title:    'Almacén Logístico Norte',
+      location: 'Santiago, RD',
+      img:      'img/almacen/almacen.png',
+      specs: [
+        { val: '2,400', label: 'm² totales' },
+        { val: '8m',    label: 'Altura libre' },
+        { val: '60d',   label: 'Instalación' },
+        { val: '2023',  label: 'Año' },
+      ],
+      desc: 'Nave industrial prefabricada de 2,400 m² con cubierta en alucink y puertas industriales automatizadas. Estructura de acero galvanizado diseñada para soportar cargas pesadas y condiciones climáticas extremas.',
+      lista: [
+        'Grandes luces libres sin columnas intermedias',
+        'Cubierta en alucink o lámina galvanizada',
+        'Puertas industriales automatizadas',
+        'Sistema de ventilación integrado',
+        'Escalable y ampliable en cualquier etapa',
+      ],
+    },
+    'glamping-lomas': {
+      badge:    'Residencial',
+      title:    'Glamping Las Lomas',
+      location: 'Jarabacoa, RD',
+      img:      'img/modular/casa-modular3.jpg',
+      specs: [
+        { val: '6',    label: 'Cabañas' },
+        { val: '45m²', label: 'Por cabaña' },
+        { val: '30d',  label: 'Instalación' },
+        { val: '2024', label: 'Año' },
+      ],
+      desc: '6 cabañas cápsula para hospedaje boutique en zona de montaña. Diseño moderno integrado con la naturaleza, con todas las instalaciones necesarias para un hospedaje de alto estándar.',
+      lista: [
+        'Estructura metálica resistente a humedad',
+        'Paneles alucink termo-aislantes',
+        'Instalación eléctrica e hidráulica completa',
+        'Acabados interiores premium',
+        'Deck de madera exterior en cada unidad',
+      ],
+    },
+    'plaza-comercial': {
+      badge:    'Comercial',
+      title:    'Plaza Comercial Modular',
+      location: 'Santo Domingo, RD',
+      img:      'img/Almacen1.png',
+      specs: [
+        { val: '8',     label: 'Locales' },
+        { val: '120m²', label: 'Por local' },
+        { val: '45d',   label: 'Instalación' },
+        { val: '2023',  label: 'Año' },
+      ],
+      desc: 'Conjunto de locales comerciales prefabricados de rápida instalación para zona franca comercial. Diseño flexible que permite configuraciones según las necesidades de cada negocio.',
+      lista: [
+        'Estructura metálica modular y flexible',
+        'Fachada en alucink con acabado premium',
+        'Instalaciones eléctricas certificadas',
+        'Acceso para personas con movilidad reducida',
+        'Ampliable con módulos adicionales',
+      ],
+    },
+    'deposito-este': {
+      badge:    'Industrial',
+      title:    'Depósito Industrial Este',
+      location: 'La Romana, RD',
+      img:      'img/almacen/almacen.png',
+      specs: [
+        { val: '1,800', label: 'm² totales' },
+        { val: '7m',    label: 'Altura libre' },
+        { val: '50d',   label: 'Instalación' },
+        { val: '2024',  label: 'Año' },
+      ],
+      desc: 'Almacén de 1,800 m² con estructura metálica galvanizada y sistema de ventilación integrado. Diseñado para uso logístico intensivo con accesos amplios para vehículos de carga pesada.',
+      lista: [
+        'Estructura metálica galvanizada de alta durabilidad',
+        'Sistema de ventilación natural integrado',
+        'Accesos dobles para camiones de carga',
+        'Iluminación LED industrial incluida',
+        'Piso de concreto reforzado',
+      ],
+    },
+  };
+
+  /* Crear backdrop */
+  const backdrop = document.createElement('div');
+  backdrop.className = 'modal-backdrop';
+  backdrop.innerHTML = `
+    <div class="modal" id="modalBox">
+      <div class="modal-close">
+        <button class="modal-close-btn" id="modalCloseBtn">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-hero"><img id="modalImg" src="" alt="" /></div>
+      <div class="modal-body">
+        <span class="modal-badge" id="modalBadge"></span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-location" id="modalLocation">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span id="modalLocationText"></span>
+        </div>
+        <div class="modal-specs" id="modalSpecs"></div>
+        <div class="modal-split">
+          <p class="modal-desc" id="modalDesc"></p>
+          <ul class="prod-list" id="modalList"></ul>
+        </div>
+        <div class="modal-footer">
+          <span class="modal-footer-note">¿Te interesa un proyecto similar?</span>
+          <a href="contacto.html" class="prod-cta">Solicitar cotización →</a>
+        </div>
+      </div>
+    </div>`;
+  document.body.appendChild(backdrop);
+
+  /* Abrir modal */
+  function openModal(key) {
+    const p = proyectos[key];
+    if (!p) return;
+
+    document.getElementById('modalImg').src            = p.img;
+    document.getElementById('modalBadge').textContent  = p.badge;
+    document.getElementById('modalTitle').textContent  = p.title;
+    document.getElementById('modalLocationText').textContent = p.location;
+    document.getElementById('modalDesc').textContent   = p.desc;
+
+    document.getElementById('modalSpecs').innerHTML = p.specs.map(s => `
+      <div class="modal-spec">
+        <div class="modal-spec-val">${s.val}</div>
+        <div class="modal-spec-label">${s.label}</div>
+      </div>`).join('');
+
+    document.getElementById('modalList').innerHTML = p.lista.map(i => `
+      <li>${i}</li>`).join('');
+
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  /* Cerrar modal */
+  function closeModal() {
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+  backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  /* Conectar links */
+  document.querySelectorAll('.proy-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const key = link.dataset.modal;
+      if (key) openModal(key);
+    });
+  });
+
+})();
