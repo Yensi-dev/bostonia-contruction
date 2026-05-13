@@ -1222,3 +1222,273 @@ footer .logo-mark {
 .form-submit svg { width: 14px; height: 14px; transition: transform 0.2s; }
 .form-submit:hover { background: var(--orange); }
 .form-submit:hover svg { transform: translateX(3px); }
+
+/* ══════════════════════════════════════════════════════
+   PROYECTOS
+══════════════════════════════════════════════════════ */
+#proyectos-main {
+  background: #f1f1f1;
+  min-height: unset;
+  padding: 6rem 0;
+}
+
+/* Filtros */
+.proy-filters {
+  display: flex;
+  gap: 0;
+  margin-bottom: 3.5rem;
+  border: 1px solid rgba(13,13,13,0.1);
+  width: fit-content;
+}
+.proy-filter {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.6rem;
+  background: transparent;
+  color: rgba(13,13,13,0.35);
+  border: none;
+  border-right: 1px solid rgba(13,13,13,0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.proy-filter:last-child { border-right: none; }
+.proy-filter:hover { color: #0d0d0d; background: rgba(13,13,13,0.04); }
+.proy-filter.active { background: #0d0d0d; color: #f1f1f1; }
+
+/* Grid */
+.proy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media(max-width:900px) { .proy-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:560px) { .proy-grid { grid-template-columns: 1fr; } }
+
+/* Card destacada ocupa 2 columnas */
+.proy-card.featured {
+  grid-column: span 2;
+}
+@media(max-width:900px) { .proy-card.featured { grid-column: span 2; } }
+@media(max-width:560px) { .proy-card.featured { grid-column: span 1; } }
+
+/* Card */
+.proy-card {
+  background: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.proy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+}
+
+/* Imagen */
+.proy-img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+}
+.proy-card.featured .proy-img { aspect-ratio: 16/9; }
+.proy-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.proy-card:hover .proy-img img { transform: scale(1.04); }
+
+.proy-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13,13,13,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.proy-card:hover .proy-overlay { opacity: 1; }
+.proy-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  border-bottom: 1px solid rgba(241,241,241,0.4);
+  padding-bottom: 0.2rem;
+  transition: border-color 0.2s;
+}
+.proy-link:hover { border-color: #f1f1f1; }
+
+/* Info */
+.proy-info { padding: 1.6rem; }
+
+.proy-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+.proy-badge {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: #0d0d0d;
+  color: #f1f1f1;
+  padding: 0.22rem 0.7rem;
+}
+.proy-location {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(13,13,13,0.38);
+}
+.proy-location svg {
+  width: 11px; height: 11px;
+  stroke: rgba(13,13,13,0.3);
+}
+
+.proy-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0d0d0d;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+.proy-info p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(13,13,13,0.48);
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+}
+
+.proy-specs {
+  display: flex;
+  gap: 1.5rem;
+  border-top: 1px solid rgba(13,13,13,0.07);
+  padding-top: 1rem;
+}
+.proy-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.proy-spec span {
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(13,13,13,0.28);
+}
+.proy-spec {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #0d0d0d;
+}
+
+/* ══════════════════════════════════════════════════════
+   DETALLE PUNTA VELLA
+══════════════════════════════════════════════════════ */
+#punta-vella {
+  background: #fff;
+  min-height: unset;
+  padding: 7rem 0;
+}
+
+.pdet-wrap {}
+
+.pdet-head {
+  max-width: 600px;
+  margin-bottom: 4rem;
+}
+.pdet-head h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #0d0d0d;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+}
+.pdet-head h2 em { color: var(--orange); font-style: normal; }
+.pdet-head p { color: rgba(13,13,13,0.45); }
+
+.pdet-split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+@media(max-width:900px) {
+  .pdet-split { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+/* Imágenes */
+.pdet-img-main {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+.pdet-img-main img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pdet-img-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+.pdet-img-row img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Specs */
+.pdet-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid rgba(13,13,13,0.08);
+  margin-bottom: 2rem;
+}
+@media(max-width:560px) { .pdet-specs-grid { grid-template-columns: 1fr 1fr; } }
+
+.pdet-spec {
+  padding: 1.2rem 1rem;
+  border-right: 1px solid rgba(13,13,13,0.08);
+  text-align: center;
+}
+.pdet-spec:last-child { border-right: none; }
+.pdet-spec-val {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0d0d0d;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.pdet-spec-label {
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(13,13,13,0.3);
+}
+
+.pdet-info > p {
+  font-size: 0.86rem;
+  font-weight: 300;
+  color: rgba(13,13,13,0.5);
+  line-height: 1.9;
+  margin-bottom: 1.6rem;
+}
