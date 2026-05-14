@@ -70,9 +70,9 @@ const FOOTER = `
       <div>
         <p class="foot-h">Navegación</p>
         <ul class="foot-links">
-          <li><a href="nosotros.html">Quiénes Somos</a></li>
+          <li><a href="index.html">Inicio</a></li>
           <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
