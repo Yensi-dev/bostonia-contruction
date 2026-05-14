@@ -35,7 +35,7 @@ const NAVBAR = `
     <a href="index.html" class="mobile-link">Inicio</a>
     <a href="proyectos.html" class="mobile-link">Proyectos</a>
     <a href="nosotros.html" class="mobile-link">Nosotros</a>
-    <a href="contacto.html" class="btn btn-outline-white" style="text-align:center;margin-top:0.5rem;">Cotizar Proyecto</a>
+    <a href="contacto.html" class="btn btn-outline-white" style="text-align:center;margin-top:0.5rem; border-radius: 50px;">Contacto</a>
   </div>
 </nav>`;
 
