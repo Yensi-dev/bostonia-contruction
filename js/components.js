@@ -4,18 +4,8 @@
 const NAVBAR = `
 <nav id="navbar">
   <div class="container nav-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-mark">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
-          <rect x="1" y="12" width="9" height="11" rx="1.5" />
-          <rect x="13" y="7" width="10" height="16" rx="1.5" />
-          <line x1="0" y1="23" x2="24" y2="23" />
-        </svg>
-      </div>
-      <div>
-        <div class="logo-name">Bostonia</div>
-        <div class="logo-sub">Construction</div>
-      </div>
+    <a href="index.html" class="logo" style="overflow: visible;">
+      <img src="img/Bostoniard-Logo.png" alt="Bostonia Construction" style="height: 60px; width: auto; object-fit: contain; overflow: visible;" />
     </a>
     <div class="nav-links">
       <a href="index.html" class="nav-link">Inicio</a>
@@ -81,11 +71,11 @@ const FOOTER = `
         <ul class="foot-contact">
           <li>
             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Av. Winston Churchill #100, Santo Domingo, RD</span>
+            <span>Blvd. Turístico del Este, <br>Cabo Engano, Punta Cana 23000 <br>Calle 3ra. No. 1 Proj. Caribbean Bavaro</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <span>(809) 555-0100</span>
+            <span>(829) 431-4000</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
