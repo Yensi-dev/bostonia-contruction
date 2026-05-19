@@ -5,7 +5,7 @@ const NAVBAR = `
 <nav id="navbar">
   <div class="container nav-inner">
     <a href="index.html" class="logo" style="overflow: visible;">
-      <img src="img/Bostoniard-Logo.png" alt="Bostonia Construction" style="height: 60px; width: auto; object-fit: contain; overflow: visible;" />
+      <img src="img/Bostoniard-Logo.png" alt="Bostonia Construction" style="height: 55px; width: auto; object-fit: contain; overflow: visible;" />
     </a>
     <div class="nav-links">
       <a href="index.html" class="nav-link">Inicio</a>
@@ -37,18 +37,8 @@ const FOOTER = `
   <div class="container">
     <div class="foot-grid-simple">
       <div class="foot-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-mark">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
-              <rect x="1" y="12" width="9" height="11" rx="1.5" />
-              <rect x="13" y="7" width="10" height="16" rx="1.5" />
-              <line x1="0" y1="23" x2="24" y2="23" />
-            </svg>
-          </div>
-          <div>
-            <div class="logo-name">Bostonia</div>
-            <div class="logo-sub">Construction</div>
-          </div>
+        <a href="index.html" class="logo" style="overflow: visible;">
+          <img src="img/Bostoniard-Logo.png" alt="Bostonia Construction" style="height: 55px; width: auto; object-fit: contain;" />
         </a>
         <p>Construyendo el futuro de República Dominicana con excelencia e integridad desde 2009.</p>
         <div class="soc-row">
