@@ -5,7 +5,7 @@ const NAVBAR = `
 <nav id="navbar">
   <div class="container nav-inner">
     <a href="index.html" class="logo" style="overflow: visible;">
-      <img src="img/Bostoniard-Logo.png" alt="Bostonia Construction" style="height: 55px; width: auto; object-fit: contain; overflow: visible;" />
+      <img src="img/Bostoniard-Logo.webp" alt="Bostonia Construction" style="height: 55px; width: auto; object-fit: contain; overflow: visible;" />
     </a>
     <div class="nav-links">
       <a href="index.html" class="nav-link">Inicio</a>
@@ -38,7 +38,7 @@ const FOOTER = `
     <div class="foot-grid-simple">
       <div class="foot-brand">
         <a href="index.html" class="logo" style="overflow: visible;">
-          <img src="img/Bostoniard-Logo.png" alt="Bostonia Construction" style="height: 55px; width: auto; object-fit: contain;" />
+          <img src="img/Bostoniard-Logo.webp" alt="Bostonia Construction" style="height: 55px; width: auto; object-fit: contain;" />
         </a>
         <p>Construyendo el futuro de República Dominicana con excelencia e integridad desde 2009.</p>
         <div class="soc-row">
@@ -65,7 +65,7 @@ const FOOTER = `
           </li>
           <li>
             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <span>(829) 431-4000</span>
+            <span>(829) 831-4000</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -86,29 +86,24 @@ const FOOTER = `
 document.getElementById('navbar-placeholder').innerHTML = NAVBAR;
 document.getElementById('footer-placeholder').innerHTML = FOOTER;
 
-/* ── Link activo ── */
 document.querySelectorAll('.nav-link').forEach(link => {
   if (link.href === window.location.href) link.classList.add('active');
 });
 
-/* ── Menú móvil ── */
 document.getElementById('menuBtn').addEventListener('click', () => {
   document.getElementById('mobileMenu').classList.toggle('open');
 });
 
-/* ── Scroll navbar ── */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
 
-/* ── Reveal on scroll ── */
 const ro = new IntersectionObserver(entries => entries.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }
 }), { threshold: .08, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
-/* ── Hero slider ── */
 const slides = document.querySelectorAll('.hero-slide');
 if (slides.length) {
   let current = 0;
@@ -124,13 +119,15 @@ if (slides.length) {
 ══════════════════════════════════════════════════════ */
 (function () {
 
-  /* Datos de cada proyecto */
   const proyectos = {
     'punta-vella': {
       badge:    'Residencial',
       title:    'Punta Vella Residences',
       location: 'Punta Vella, RD',
-      img:      'img/modular/residencial-capsules.png',
+      imgs: [
+        'img/modular/residencial-capsules.webp',
+        'img/modular/casa-modular3.webp',
+      ],
       specs: [
         { val: '12',   label: 'Unidades' },
         { val: '65m²', label: 'Por unidad' },
@@ -146,89 +143,59 @@ if (slides.length) {
         'Terraza privada en cada unidad',
       ],
     },
-    'almacen-norte': {
+    'mini-nave-mgs1500': {
       badge:    'Industrial',
-      title:    'Almacén Logístico Norte',
-      location: 'Santiago, RD',
-      img:      'img/almacen/almacen.png',
-      specs: [
-        { val: '2,400', label: 'm² totales' },
-        { val: '8m',    label: 'Altura libre' },
-        { val: '60d',   label: 'Instalación' },
-        { val: '2023',  label: 'Año' },
+      title:    'Mini-Nave MGS-1500',
+      location: 'Puerto Plata, RD',
+      imgs: [
+        'img/projects/mini-nave-mgs-1500/Mini-Nave-MGS-1500.webp',
       ],
-      desc: 'Nave industrial prefabricada de 2,400 m² con cubierta en alucink y puertas industriales automatizadas. Estructura de acero galvanizado diseñada para soportar cargas pesadas y condiciones climáticas extremas.',
+      specs: [
+        { val: '139m²', label: 'Área total' },
+        { val: '4.88m', label: 'Altura de alero' },
+        { val: '5.64m', label: 'Altura de cumbrera' },
+        { val: '2025',  label: 'Año' },
+      ],
+      desc: 'Nave industrial compacta de 9.14m x 15.24m con estructura de marco de acero y sistema de paneles metálicos prefabricados en paredes y techo. Incluye mezzanine de 15.24m x 3.66m para almacenaje y área de trabajo adicional, oficina privada integrada y puerta enrollable de 4.27m x 4.27m.',
       lista: [
-        'Grandes luces libres sin columnas intermedias',
-        'Cubierta en alucink o lámina galvanizada',
-        'Puertas industriales automatizadas',
-        'Sistema de ventilación integrado',
-        'Escalable y ampliable en cualquier etapa',
+        'Estructura de marco de acero con paneles metálicos prefabricados',
+        'Mezzanine de 15.24m × 3.66m para almacenaje y trabajo adicional',
+        'Oficina privada integrada en planta baja',
+        'Puerta enrollable de 4.27m × 4.27m',
+        'Ventana de aluminio corrediza',
+        'Pendiente de techo 1:12 para drenaje eficiente',
       ],
     },
-    'glamping-lomas': {
-      badge:    'Residencial',
-      title:    'Glamping Las Lomas',
-      location: 'Jarabacoa, RD',
-      img:      'img/modular/casa-modular3.jpg',
+    'savannah-crest': {
+      badge:    'Próximamente',
+      title:    'Savannah Crest Residence',
+      location: 'Por anunciar',
+      imgs: [
+        'img/projects/savannah-crest-residence/imagen1.jpg',
+        'img/projects/savannah-crest-residence/imagen2.jpg',
+        'img/projects/savannah-crest-residence/imagen3.jpg',
+        'img/projects/savannah-crest-residence/imagen4.jpg',
+        'img/projects/savannah-crest-residence/imagen5.jpg',
+        
+      ],
       specs: [
-        { val: '6',    label: 'Cabañas' },
-        { val: '45m²', label: 'Por cabaña' },
-        { val: '30d',  label: 'Instalación' },
-        { val: '2024', label: 'Año' },
+        { val: '—',    label: 'Unidades' },
+        { val: '—',    label: 'Área' },
+        { val: '2026', label: 'Año estimado' },
+        { val: 'Dev',  label: 'Estado' },
       ],
-      desc: '6 cabañas cápsula para hospedaje boutique en zona de montaña. Diseño moderno integrado con la naturaleza, con todas las instalaciones necesarias para un hospedaje de alto estándar.',
+      desc: 'Savannah Crest Residence es un exclusivo desarrollo residencial actualmente en fase de planificación. Pronto revelaremos todos los detalles de este proyecto que promete elevar los estándares de vida en República Dominicana con diseño arquitectónico de alto estándar.',
       lista: [
-        'Estructura metálica resistente a humedad',
-        'Paneles alucink termo-aislantes',
-        'Instalación eléctrica e hidráulica completa',
-        'Acabados interiores premium',
-        'Deck de madera exterior en cada unidad',
-      ],
-    },
-    'plaza-comercial': {
-      badge:    'Comercial',
-      title:    'Plaza Comercial Modular',
-      location: 'Santo Domingo, RD',
-      img:      'img/Almacen1.png',
-      specs: [
-        { val: '8',     label: 'Locales' },
-        { val: '120m²', label: 'Por local' },
-        { val: '45d',   label: 'Instalación' },
-        { val: '2023',  label: 'Año' },
-      ],
-      desc: 'Conjunto de locales comerciales prefabricados de rápida instalación para zona franca comercial. Diseño flexible que permite configuraciones según las necesidades de cada negocio.',
-      lista: [
-        'Estructura metálica modular y flexible',
-        'Fachada en alucink con acabado premium',
-        'Instalaciones eléctricas certificadas',
-        'Acceso para personas con movilidad reducida',
-        'Ampliable con módulos adicionales',
-      ],
-    },
-    'deposito-este': {
-      badge:    'Industrial',
-      title:    'Depósito Industrial Este',
-      location: 'La Romana, RD',
-      img:      'img/almacen/almacen.png',
-      specs: [
-        { val: '1,800', label: 'm² totales' },
-        { val: '7m',    label: 'Altura libre' },
-        { val: '50d',   label: 'Instalación' },
-        { val: '2024',  label: 'Año' },
-      ],
-      desc: 'Almacén de 1,800 m² con estructura metálica galvanizada y sistema de ventilación integrado. Diseñado para uso logístico intensivo con accesos amplios para vehículos de carga pesada.',
-      lista: [
-        'Estructura metálica galvanizada de alta durabilidad',
-        'Sistema de ventilación natural integrado',
-        'Accesos dobles para camiones de carga',
-        'Iluminación LED industrial incluida',
-        'Piso de concreto reforzado',
+        'Desarrollo residencial de alto estándar',
+        'Diseño arquitectónico en proceso',
+        'Ubicación estratégica por anunciar',
+        'Acabados y especificaciones próximamente',
+        'Registro de interés disponible vía contacto',
       ],
     },
   };
 
-  /* Crear backdrop */
+  /* ── Crear backdrop con galería ── */
   const backdrop = document.createElement('div');
   backdrop.className = 'modal-backdrop';
   backdrop.innerHTML = `
@@ -238,11 +205,26 @@ if (slides.length) {
           <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
-      <div class="modal-hero"><img id="modalImg" src="" alt="" /></div>
+
+      <!-- Galería principal -->
+      <div class="modal-gallery">
+        <div class="modal-gallery-main">
+          <img id="modalMainImg" src="" alt="" />
+          <button class="gallery-nav gallery-prev" id="galleryPrev">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15,18 9,12 15,6"/></svg>
+          </button>
+          <button class="gallery-nav gallery-next" id="galleryNext">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,6 15,12 9,18"/></svg>
+          </button>
+          <div class="gallery-counter" id="galleryCounter"></div>
+        </div>
+        <div class="modal-gallery-thumbs" id="galleryThumbs"></div>
+      </div>
+
       <div class="modal-body">
         <span class="modal-badge" id="modalBadge"></span>
         <h2 class="modal-title" id="modalTitle"></h2>
-        <div class="modal-location" id="modalLocation">
+        <div class="modal-location">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <span id="modalLocationText"></span>
         </div>
@@ -259,16 +241,61 @@ if (slides.length) {
     </div>`;
   document.body.appendChild(backdrop);
 
-  /* Abrir modal */
+  /* ── Estado galería ── */
+  let currentImgs = [];
+  let currentIdx  = 0;
+
+  function setGalleryImg(idx) {
+    currentIdx = idx;
+    document.getElementById('modalMainImg').src = currentImgs[idx];
+    document.getElementById('galleryCounter').textContent = `${idx + 1} / ${currentImgs.length}`;
+
+    document.querySelectorAll('.gallery-thumb').forEach((t, i) => {
+      t.classList.toggle('active', i === idx);
+    });
+
+    document.getElementById('galleryPrev').style.display = currentImgs.length > 1 ? '' : 'none';
+    document.getElementById('galleryNext').style.display = currentImgs.length > 1 ? '' : 'none';
+    document.getElementById('galleryCounter').style.display = currentImgs.length > 1 ? '' : 'none';
+  }
+
+  document.getElementById('galleryPrev').addEventListener('click', () => {
+    setGalleryImg((currentIdx - 1 + currentImgs.length) % currentImgs.length);
+  });
+  document.getElementById('galleryNext').addEventListener('click', () => {
+    setGalleryImg((currentIdx + 1) % currentImgs.length);
+  });
+
+  /* ── Abrir modal ── */
   function openModal(key) {
     const p = proyectos[key];
     if (!p) return;
 
-    document.getElementById('modalImg').src            = p.img;
-    document.getElementById('modalBadge').textContent  = p.badge;
-    document.getElementById('modalTitle').textContent  = p.title;
+    currentImgs = p.imgs;
+    currentIdx  = 0;
+
+    /* Thumbnails */
+    const thumbsEl = document.getElementById('galleryThumbs');
+    if (currentImgs.length > 1) {
+      thumbsEl.style.display = 'flex';
+      thumbsEl.innerHTML = currentImgs.map((src, i) => `
+        <button class="gallery-thumb${i === 0 ? ' active' : ''}" data-idx="${i}">
+          <img src="${src}" alt="Vista ${i + 1}" />
+        </button>`).join('');
+      thumbsEl.querySelectorAll('.gallery-thumb').forEach(btn => {
+        btn.addEventListener('click', () => setGalleryImg(+btn.dataset.idx));
+      });
+    } else {
+      thumbsEl.style.display = 'none';
+      thumbsEl.innerHTML = '';
+    }
+
+    setGalleryImg(0);
+
+    document.getElementById('modalBadge').textContent        = p.badge;
+    document.getElementById('modalTitle').textContent        = p.title;
     document.getElementById('modalLocationText').textContent = p.location;
-    document.getElementById('modalDesc').textContent   = p.desc;
+    document.getElementById('modalDesc').textContent         = p.desc;
 
     document.getElementById('modalSpecs').innerHTML = p.specs.map(s => `
       <div class="modal-spec">
@@ -276,14 +303,12 @@ if (slides.length) {
         <div class="modal-spec-label">${s.label}</div>
       </div>`).join('');
 
-    document.getElementById('modalList').innerHTML = p.lista.map(i => `
-      <li>${i}</li>`).join('');
+    document.getElementById('modalList').innerHTML = p.lista.map(i => `<li>${i}</li>`).join('');
 
     backdrop.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
-  /* Cerrar modal */
   function closeModal() {
     backdrop.classList.remove('open');
     document.body.style.overflow = '';
@@ -291,9 +316,12 @@ if (slides.length) {
 
   document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
   backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowLeft')  setGalleryImg((currentIdx - 1 + currentImgs.length) % currentImgs.length);
+    if (e.key === 'ArrowRight') setGalleryImg((currentIdx + 1) % currentImgs.length);
+  });
 
-  /* Conectar links */
   document.querySelectorAll('.proy-link').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
