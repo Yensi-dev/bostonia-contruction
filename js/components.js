@@ -149,6 +149,8 @@ if (slides.length) {
       location: 'Puerto Plata, RD',
       imgs: [
         'img/projects/mini-nave-mgs-1500/Mini-Nave-MGS-1500.webp',
+        'img/projects/mini-nave-mgs-1500/img-mininave-interior.webp',
+        'img/projects/mini-nave-mgs-1500/img-mininave-office.webp',
       ],
       specs: [
         { val: '139m²', label: 'Área total' },
