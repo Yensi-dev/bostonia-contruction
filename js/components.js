@@ -61,7 +61,7 @@ const FOOTER = `
         <ul class="foot-contact">
           <li>
             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Blvd. Turístico del Este, <br>Cabo Engano, Punta Cana 23000 <br>Calle 3ra. No. 1 Proj. Caribbean Bavaro</span>
+            <span>Blvd. Turístico del Este, <br>Cabo Engaño, Punta Cana 23000 <br>Calle 3ra. No. 1 </span>
           </li>
           <li>
             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -126,7 +126,10 @@ if (slides.length) {
       location: 'Punta Vella, RD',
       imgs: [
         'img/modular/residencial-capsules.webp',
-        'img/modular/casa-modular3.webp',
+        'img/punta-vella/PHOTO-002.webp',
+        'img/punta-vella/PHOTO-003.webp',
+        'img/punta-vella/PHOTO-004.webp',
+
       ],
       specs: [
         { val: '12',   label: 'Unidades' },

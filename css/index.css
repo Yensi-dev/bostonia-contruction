@@ -1872,3 +1872,64 @@ footer .logo-mark {
   font-weight: 300;
   color: rgba(13,13,13,0.35);
 }
+
+/* ══════════════════════════════════════════════════════
+   INSTALACIÓN — sección con video
+══════════════════════════════════════════════════════ */
+#instalacion {
+  background: #fff;
+  padding: 7rem 0;
+  min-height: unset;
+}
+
+.inst-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Video */
+.inst-video-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #0d0d0d;
+}
+.inst-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.inst-video::-webkit-media-controls-panel {
+  background-color: rgba(13,13,13,0.55);
+}
+
+/* Texto */
+.inst-body .prod-tag { margin-bottom: 1.2rem; }
+.inst-body h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: #0d0d0d;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+}
+.inst-body p {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(13,13,13,0.5);
+  line-height: 1.9;
+  margin-bottom: 1.8rem;
+}
+.inst-body .prod-list { margin-bottom: 2.2rem; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .inst-split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .inst-video-wrap { aspect-ratio: 16/9; }
+}
